@@ -2,7 +2,7 @@
   "name": "socialiteapi",
   "version": "1.0.0",
   "description": "The Social Network API is a web-based application that enables users to create, update, and delete user profiles, connect with friends, post thoughts, and interact with their network through reactions, all using RESTful API routes.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
