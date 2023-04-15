@@ -10,13 +10,16 @@ const {
 } = require('./controllers/user-controllers');
 const {
   getAllThoughts,
-  getThoughtByID,
+  getThoughtById,
   addThought,
   updateThought,
   removeThought,
+
+} = require('./controllers/thought-controllers');
+const {
   addReaction,
   removeReaction,
-} = require('./controllers/thought-controllers');
+} = require('./controllers/reaction-controllers');
 
 // /api/users
 router.route('/users')
@@ -41,16 +44,16 @@ router.route('/thoughts')
 
 // /api/thoughts/:thoughtId
 router.route('/thoughts/:thoughtId')
-  .get(getThoughtByID)
+  .get(getThoughtById)
   .put(updateThought)
   .delete(removeThought);
 
 // /api/thoughts/:thoughtId/reactions
-router.route('/thoughts/:thoughtId/reactions')
+router.route('/reaction')
   .post(addReaction);
 
 // /api/thoughts/:thoughtId/reactions/:reactionId
-router.route('/thoughts/:thoughtId/reactions/:reactionId')
+router.route('/reactions/:reactionId')
   .delete(removeReaction);
 
 module.exports = router;
