@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ash12486/SocialiteAPI#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "moment": "^2.29.4",
     "mongoose": "^7.0.3"
   }
 }
