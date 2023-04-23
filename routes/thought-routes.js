@@ -1,14 +1,5 @@
 const router = require('express').Router();
 const {
-  getAllUsers,
-  getUserById,
-  createUser,
-  updateUser,
-  deleteUser,
-  addFriend,
-  removeFriend,
-} = require('./controllers/user-controllers');
-const {
   getAllThoughts,
   getThoughtById,
   addThought,
@@ -16,23 +7,7 @@ const {
   removeThought,
   addReaction,
   removeReaction,
-} = require('./controllers/thought-controllers');
-
-// /api/users
-router.route('/api/users')
-  .get(getAllUsers)
-  .post(createUser);
-
-// /api/users/:userId
-router.route('/api/users/:userId')
-  .get(getUserById)
-  .put(updateUser)
-  .delete(deleteUser);
-
-// /api/users/:userId/friends/:friendId
-router.route('/api/users/:userId/friends/:friendId')
-  .post(addFriend)
-  .delete(removeFriend);
+} = require('../controllers/thought-controllers');
 
 // /api/thoughts
 router.route('/api/thoughts')
